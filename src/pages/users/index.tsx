@@ -15,6 +15,7 @@ import {
 } from "@chakra-ui/react";
 import { RiAddLine, RiPencilLine } from "react-icons/ri";
 import { Header } from "../../components/Header";
+import { Pagination } from "../../components/Pagination";
 import Sidebar from "../../components/Sidebar";
 
 export default function UserList() {
@@ -78,7 +79,62 @@ export default function UserList() {
                 </Td>
               </Tr>
             </Tbody>
+            <Tbody>
+              <Tr>
+                <Td px="6">
+                  <Checkbox colorScheme="blue" />
+                </Td>
+                <Td>
+                  <Box>
+                    <Text fontWeight="bold">Gabriel Ribeiro</Text>
+                    <Text fontSize="sm" color="gray.300">
+                      biellbigama@gmail.com
+                    </Text>
+                  </Box>
+                </Td>
+                <Td>06 de agosto 2021</Td>
+                <Td>
+                  <Button
+                    as="a"
+                    size="sm"
+                    fontSize="sm"
+                    colorScheme="teal"
+                    leftIcon={<Icon as={RiPencilLine} fontSize="16" />}
+                  >
+                    Editar
+                  </Button>
+                </Td>
+              </Tr>
+            </Tbody>
+            <Tbody>
+              <Tr>
+                <Td px="6">
+                  <Checkbox colorScheme="blue" />
+                </Td>
+                <Td>
+                  <Box>
+                    <Text fontWeight="bold">Gabriel Ribeiro</Text>
+                    <Text fontSize="sm" color="gray.300">
+                      biellbigama@gmail.com
+                    </Text>
+                  </Box>
+                </Td>
+                <Td>06 de agosto 2021</Td>
+                <Td>
+                  <Button
+                    as="a"
+                    size="sm"
+                    fontSize="sm"
+                    colorScheme="teal"
+                    leftIcon={<Icon as={RiPencilLine} fontSize="16" />}
+                  >
+                    Editar
+                  </Button>
+                </Td>
+              </Tr>
+            </Tbody>
           </Table>
+          <Pagination />
         </Box>
       </Flex>
     </Box>
