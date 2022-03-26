@@ -14,6 +14,7 @@ import {
   Tr,
   useBreakpointValue,
 } from "@chakra-ui/react";
+import Link from "next/link";
 import { RiAddLine, RiPencilLine } from "react-icons/ri";
 import { Header } from "../../components/Header";
 import { Pagination } from "../../components/Pagination";
@@ -35,16 +36,17 @@ export default function UserList() {
             <Heading size="lg" fontWeight="normal">
               Usuários
             </Heading>
-
-            <Button
-              as="a"
-              size="sm"
-              fontSize="sm"
-              colorScheme="blue"
-              leftIcon={<Icon as={RiAddLine} fontSize="20" />}
-            >
-              Criar novo
-            </Button>
+            <Link href="/users/create" passHref>
+              <Button
+                as="a"
+                size="sm"
+                fontSize="sm"
+                colorScheme="blue"
+                leftIcon={<Icon as={RiAddLine} fontSize="20" />}
+              >
+                Criar novo
+              </Button>
+            </Link>
           </Flex>
 
           <Table colorScheme="whiteAlpha">
@@ -72,7 +74,8 @@ export default function UserList() {
                   </Box>
                 </Td>
                 {isWideVersion && <Td>06 de agosto 2021</Td>}
-                {/* <Td>
+                {/* <Link href="users/[id]" as="users/1" passHref>
+                <Td>
                   <Button
                     as="a"
                     size="sm"
@@ -82,7 +85,8 @@ export default function UserList() {
                   >
                     {isWideVersion ? "editar" : ""}
                   </Button>
-                </Td> */}
+                </Td>
+                </Link> */}
               </Tr>
             </Tbody>
             <Tbody>
@@ -99,7 +103,8 @@ export default function UserList() {
                   </Box>
                 </Td>
                 {isWideVersion && <Td>06 de agosto 2021</Td>}
-                {/* <Td>
+                {/* <Link href="users/[id]" as="users/2" passHref>
+                <Td>
                   <Button
                     as="a"
                     size="sm"
@@ -109,7 +114,7 @@ export default function UserList() {
                   >
                     {isWideVersion ? "editar" : ""}
                   </Button>
-                </Td> */}
+                </Link> */}
               </Tr>
             </Tbody>
             <Tbody>
@@ -126,7 +131,8 @@ export default function UserList() {
                   </Box>
                 </Td>
                 {isWideVersion && <Td>06 de agosto 2021</Td>}
-                {/* <Td>
+                {/* <Link href="users/[id]" as="users/3" passHref>
+                <Td>
                   <Button
                     as="a"
                     size="sm"
@@ -136,7 +142,7 @@ export default function UserList() {
                   >
                     {isWideVersion ? "editar" : ""}
                   </Button>
-                </Td> */}
+                </Link> */}
               </Tr>
             </Tbody>
           </Table>
